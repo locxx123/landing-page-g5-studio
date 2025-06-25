@@ -826,7 +826,9 @@ html {
 .about-us .our-team-image img {
     width: 100%;
 }
-
+.our-team-logo {
+    display: none;
+}
 @media screen and (max-width: 575px) {
     .about-us {
         margin-top: 0;
