@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G5 Studio</title>
     <!-- <script type="module" crossorigin="" src="./a.js"></script> -->
-    <link rel="stylesheet" href="./a.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body class="vsc-initialized">
@@ -97,6 +97,7 @@
                                     <div class="sub-content-banner"><img src="/assets/banner-services-dc74406c.png"
                                             alt=""></div>
                                 </div>
+                                <img src="./assets/banner-services-dc74406c.png" alt="">
                             </div>
                             <div class="services-content services-content-mobile">
                                 <div class="services-sub-content sub-content-1">
@@ -186,10 +187,10 @@
                         <img src="./assets/image-home-5.png" alt="">
                     </div>
                     <div class="home-image-mobile">
-                        <img src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20.png" alt="">
-                        <img src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20 (1).png" alt="">
-                        <img src="./assets/ed0fc9851baf50a4ced3c6a69cbdaba19729dd11.png" alt="">
-                        <img src="./assets/2d324cbcf6a9b54f2ef82dc9647e1207245447cd.png" alt="">
+                        <img style="width: 200%" src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20.png" alt="">
+                        <img style="width: 200%; transform: translateX(-50%);" src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20 (1).png" alt="">
+                        <img style="width: 100%" src="./assets/ed0fc9851baf50a4ced3c6a69cbdaba19729dd11.png" alt="">
+                        <img style="width: 200%; transform: translateX(-50%);" src="./assets/2d324cbcf6a9b54f2ef82dc9647e1207245447cd.png" alt="">
                     </div>
                     <div class="about-us" id="about-us">
                         <h2 class="title">About Us</h2>
@@ -235,10 +236,12 @@
                                 </div>
                             </div>
                             <div class="our-team-image"><img src="/assets/ourteam-banner-e29a3fb2.png" alt=""></div>
+                            <div class="our-team-logo"><img src="./assets/logo-9254d519.png" alt=""></div>
                         </div>
                     </div>
                     <div class="contact" id="contact">
                         <div class="contact-inner">
+                            <div class="logo"><img src="/assets/logo-9254d519.png" alt=""></div>
                             <h2 class="title">Let's talk about your project</h2>
                             <div class="description">
                                 <p>You surely have some cool projects in mind.</p>
@@ -276,8 +279,15 @@
         </div>
     </div>
 
-
-
-    <!-- </body><ddict-div style="visibility: visible !important;"></ddict-div> -->
-
 </html>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>

@@ -39,19 +39,21 @@
     font-style: normal;
 }
 
-/* @font-face {
+@font-face {
     font-family: Moul;
-    src: url(/assets/Moul-Regular-4d7c768d.ttf) format("truetype");
+    src: url(/assets/font/Moul-Regular.ttf) format("truetype");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
-} */
+}
 
 :root {
     --padding-page: 0 15%;
     --padding-frame: 2rem 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 html,
 body {
     font-size: 14px;
@@ -583,7 +585,7 @@ html {
     position: relative;
 }
 .our-work-right-inner {
-    padding-top: 6.5rem;
+    padding-top: 15.5rem;
     padding-bottom: 6.5rem;
 }
 .our-work-left {
@@ -842,8 +844,17 @@ html {
     .about-us .our-team {
         margin-top: 2.3rem;
         flex-direction: column-reverse;
+        position: relative;
     }
-
+    .our-team-logo {
+        display: flex;
+        justify-content: center;
+        margin: 70px;
+        opacity: 0.3;
+    }
+    .our-team-logo img{
+        width: 80%;
+    }
     .about-us .our-team-image {
         width: 80%;
         margin: auto;
@@ -892,6 +903,9 @@ html {
     position: relative;
     z-index: 2;
     padding: var(--padding-page);
+}
+.contact-inner .logo {
+    display: none;
 }
 
 .contact .description {
@@ -976,9 +990,15 @@ html {
     }
 
     .contact form button {
-        margin-top: 10px;
+        margin-top: 1rem;
         height: 5rem;
         width: 17rem;
+    }
+    .contact-inner .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
     }
 
     .contact .frame-bg {
