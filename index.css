@@ -19,21 +19,21 @@
  */
 @font-face {
     font-family: IBM Plex Sans;
-    src: url(/assets/font/IBMPlexSans-Bold.ttf) format("truetype");
+    src: url(./assets/font/IBMPlexSans-Bold.ttf) format("truetype");
     font-display: swap;
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: IBM Plex Sans;
-    src: url(/assets/font/IBMPlexSans-Regular.ttf) format("truetype");
+    src: url(./assets/font/IBMPlexSans-Regular.ttf) format("truetype");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: Paytone One;
-    src: url(/assets/font/PaytoneOne-Regular.ttf) format("truetype");
+    src: url(./assets/font/PaytoneOne-Regular.ttf) format("truetype");
     font-display: swap;
     /* font-weight: 400; */
     font-style: normal;
@@ -41,7 +41,7 @@
 
 @font-face {
     font-family: Moul;
-    src: url(/assets/font/Moul-Regular.ttf) format("truetype");
+    src: url(./assets/font/Moul-Regular.ttf) format("truetype");
     font-display: swap;
     font-weight: 400;
     font-style: normal;
