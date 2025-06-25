@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="./assets/logo-9254d519.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G5 Studio</title>
     <!-- <script type="module" crossorigin="" src="./a.js"></script> -->
@@ -27,7 +29,21 @@
                 <div class="home-page">
                     <div class="introduction">
                         <div class="introduction-inner">
-                            <img src="./assets/banner-introduction-aa71d3bf.png" alt="Background" class="intro-bg" />
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./assets/slider1.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider2.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider3.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider4.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider5.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider6.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="./assets/slider7.png" alt=""></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
                             <div class="content">
                                 <h1>G5 Studio</h1>
                                 <h2>Creating future</h2>
@@ -188,9 +204,11 @@
                     </div>
                     <div class="home-image-mobile">
                         <img style="width: 200%" src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20.png" alt="">
-                        <img style="width: 200%; transform: translateX(-50%);" src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20 (1).png" alt="">
+                        <img style="width: 200%; transform: translateX(-50%);"
+                            src="./assets/44058dc0ed0d9278e8224916dfd55ce54c661f20 (1).png" alt="">
                         <img style="width: 100%" src="./assets/ed0fc9851baf50a4ced3c6a69cbdaba19729dd11.png" alt="">
-                        <img style="width: 200%; transform: translateX(-50%);" src="./assets/2d324cbcf6a9b54f2ef82dc9647e1207245447cd.png" alt="">
+                        <img style="width: 200%; transform: translateX(-50%);"
+                            src="./assets/2d324cbcf6a9b54f2ef82dc9647e1207245447cd.png" alt="">
                     </div>
                     <div class="about-us" id="about-us">
                         <h2 class="title">About Us</h2>
@@ -289,5 +307,24 @@
                 behavior: 'smooth'
             });
         });
+    });
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 4,          // Hiển thị 4 ảnh
+        slidesPerGroup: 1,         // Mỗi lần dịch 1 ảnh
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2,  // Dưới 768px: hiện 2 ảnh
+                spaceBetween: 8,
+            },
+            768: {
+                slidesPerView: 4,  // Từ 768px trở lên: hiện 4 ảnh
+                spaceBetween: 20,
+            }
+        }
     });
 </script>
