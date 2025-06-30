@@ -244,11 +244,20 @@ html {
 }
 
 @media screen and (max-width: 575px) {
+    .intro-bg {
+        width: 140%;
+        transform: translateX(-12rem);
+    }
     .home-image {
         display: none;
     }
     .home-image-mobile {
         display: block;
+        margin: 0 2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
     }
     .introduction {
         aspect-ratio: unset;
@@ -429,8 +438,27 @@ html {
 .services-content-mobile {
     display: none !important;
 }
+.description-service-mobile {
+    display: none;
+}
 
 @media screen and (max-width: 575px) {
+    .description-service-mobile {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    .description-service-mobile p {
+        color: #fff;
+        font-family: IBM Plex Sans;
+        text-align: center;
+        opacity: 60%;
+        font-size: 1.6rem;
+        margin-top: 18px;
+        width: 77%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
     .services-content-pc {
         display: none !important;
     }
@@ -440,7 +468,7 @@ html {
     .our-service-mobile {
         position: relative;
         display: block;
-        padding: 2rem 12rem;
+        padding: 2rem 5rem;
         z-index: 2;
     }
     .our-service-mobile::before {
@@ -450,7 +478,7 @@ html {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url("./assets/logo-9254d519.png");
+        background-image: url("./assets/bg-logo.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -470,6 +498,7 @@ html {
         font-family: IBM Plex Sans;
         text-align: center;
         opacity: 60%;
+        font-size: 1.6rem;
     }
     .our-services {
         padding-top: 2.6rem;
@@ -523,6 +552,7 @@ html {
     .our-services .services .services-content .service-item {
         padding: 0;
         min-height: unset;
+        margin-right: 4rem;
     }
 
     .our-services .services .services-content .service-item h4 {
@@ -632,11 +662,11 @@ html {
     left: 0;
     width: 100%;
     height: 120%;
-    background-image: url("./assets/logo-9254d519.png");
+    background-image: url("./assets/bg-logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0px) brightness(0.3);
+    filter: blur(0px) brightness(0.15);
     z-index: 1;
 }
 .our-work-right {
@@ -705,11 +735,11 @@ html {
         position: absolute;
         width: 100%;
         height: 115%;
-        background-image: url("./assets/logo-9254d519.png");
+        background-image: url("./assets/bg-logo.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        filter: blur(0px) brightness(0.3);
+        filter: blur(0px) brightness(0.15);
         z-index: 1;
     }
     .our-work-right-inner {
@@ -755,7 +785,7 @@ html {
 .about-us {
     padding: var(--padding-page);
     padding-top: 6.5rem;
-    padding-bottom: 6.5rem;
+    padding-bottom: 8.5rem;
     z-index: 100;
 }
 
@@ -771,7 +801,7 @@ html {
 
 .about-us .our-team {
     display: flex;
-    margin-top: 9.5rem;
+    margin-top: 7.5rem;
 }
 
 .about-us .our-team-content {
@@ -783,6 +813,7 @@ html {
 .about-us .our-team-content p.description {
     text-align: left;
     width: 100%;
+    opacity: 0.6;
 }
 
 .about-us .our-team-content .teams {
@@ -794,14 +825,14 @@ html {
     width: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 1.8rem;
+    margin-bottom: 0.9rem;
     gap: 1.5rem;
 }
 
 .about-us .our-team-content .teams .team-item .number {
     width: 4.2rem;
     height: 4.2rem;
-    background-color: #d0680a;
+    background-color: #fb9c2c;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -813,7 +844,7 @@ html {
 
 .about-us .our-team-content .teams .team-item .name {
     font-size: 1.6rem;
-    color: #d0680a;
+    color: #fb9c2c;
     font-weight: 600;
     font-family: IBM Plex Sans;
     flex: 1;
@@ -841,6 +872,7 @@ html {
         font-size: 1.6rem;
         line-height: 1.8rem;
         width: 90%;
+        margin-bottom: 2.5rem;
     }
 
     .about-us .our-team {
@@ -852,10 +884,7 @@ html {
         display: flex;
         justify-content: center;
         margin: 70px;
-        opacity: 0.3;
-    }
-    .our-team-logo img{
-        width: 80%;
+        opacity: 0.15;
     }
     .about-us .our-team-image {
         width: 80%;
@@ -898,7 +927,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(0px) brightness(0.3);
+    filter: blur(0px) brightness(0.15);
     z-index: 1;
 }
 .contact-inner {
@@ -917,6 +946,7 @@ html {
     padding-bottom: 4rem;
     font-size: 2rem;
     line-height: 2.8rem;
+    opacity: 0.6;
 }
 .contact .description p {
     font-family: IBM Plex Sans;
@@ -972,6 +1002,9 @@ html {
     .contact h2.title {
         width: 80%;
         margin: auto;
+    }
+    .contact .description {
+        padding-bottom: 8rem;
     }
 
     .contact p.description {
@@ -1191,10 +1224,9 @@ button {
     }
 
     .footer .content {
-        gap: 2rem;
+        gap: 10rem;
         position: relative;
-        justify-content: space-between;
-        padding-top: 11rem;
+        padding-top: 2rem;
     }
 
     .footer .content .logo {
@@ -1206,8 +1238,7 @@ button {
     }
 
     .footer .content .logo img {
-        height: 100%;
-        width: auto;
+        display: none;
     }
 
     .footer p.copyright {
